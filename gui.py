@@ -87,10 +87,7 @@ def conclusion():
         result_text.insert(INSERT,result)                   #displaying the summary
         
         
-                                              
-    
-    
-    
+                                                 
 #RESET FUNCTIONALITY
     
 def reset(tag):
@@ -151,7 +148,6 @@ def get_comparision():
     
   # Window creation 
     
-
 window= Tk()
 window.title("Text- Summarizer")
 window.geometry("")
@@ -166,7 +162,6 @@ tab_control.add(t1,text = 'summarizer')
 tab_control.add(t2,text = 'compare')
 
 
-
 tab_control.pack(expan = 1, fill="both")
 
 tab_control1=ttk.Notebook(t1)
@@ -178,7 +173,6 @@ dtab=ttk.Frame(tab_control1)
 tab_control1.add(ttab,text="Text")
 tab_control1.add(utab,text="URL")
 tab_control1.add(dtab,text="DOC")
-
 
 
 tab_control1.pack(expan=1 , fill="both")
@@ -209,7 +203,6 @@ text_entry1.pack()
 
 bframe = ttk.Frame(ttab)
 bframe.pack(side=BOTTOM,expand=YES)
-
 
 
 #Button for clearing the text
@@ -278,8 +271,7 @@ text_entry3.grid(row=2,column=0,columnspan=8)
 
 Frame(dtab,height=10,bg="#ececec").grid(row=3,column=0,columnspan=8)
 
-
-
+#Button for opening a file
 open_file = Button(dtab, text = "Open", padx=5,pady=5, command=get_info,width=10)
 open_file.grid(row=4,column=3)
 
@@ -290,8 +282,6 @@ summarize2.grid(row=4,column=4)
 
 Frame(dtab,height=10,bg="#ececec").grid(row=5,column=0,columnspan=8)
 
-
- 
 
 # TEXT AREA FOR SUMMARIZED OUTPUT
 result_text=scrolledtext.ScrolledText(dtab,height=15,width=160)
