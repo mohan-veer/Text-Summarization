@@ -68,6 +68,8 @@ def summary(text):
     
     #setting a threshold for considering the important sentences
     threshold=(max(sent_score.values()))/2
+    print(sent_score)
+    print(len(sent_score.keys()))
     
     for sentence in sent_score.keys():
         if(sent_score[sentence]>=threshold):

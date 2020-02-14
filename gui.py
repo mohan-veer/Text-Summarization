@@ -133,7 +133,6 @@ def get_comparision():
     summarized_text.insert(INSERT,result)
     original_text.insert(INSERT, summarizer.final_text)
     summary_sent = summarizer.count
-    print(summary_sent)
     summary_words = nltk.word_tokenize(result)
     summary_read_time = len(summary_words)/200
     
@@ -148,10 +147,9 @@ def get_comparision():
     tree.insert('','end' ,values=("Original Text",len(original_words),len(original_sent),original_read_time ))
     tree.insert('','end' ,values=("Summarized Text",len(summary_words),summary_sent,summary_read_time ))
         
+  
+# Window creation 
     
-  # Window creation 
-    
-
 window= Tk()
 window.title("Text- Summarizer")
 window.geometry("")
